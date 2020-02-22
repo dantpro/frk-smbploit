@@ -79,7 +79,7 @@ if [ $opc -eq 1 ]; then
 		./SMBploit.sh
 
 elif [ $opc -eq 2 ]; then
-    echo ""
+        echo ""
 	echo -e "$a ¿LHOST?$nc"
 	echo ""
 	read lhost
@@ -100,7 +100,7 @@ elif [ $opc -eq 2 ]; then
 		./SMBploit.sh
 
 elif [ $opc -eq 3 ]; then
-    echo ""
+        echo ""
 	echo -e "$a ¿LHOST?$nc"
 	echo ""
 	read lhost
@@ -121,7 +121,7 @@ elif [ $opc -eq 3 ]; then
 		./SMBploit.sh
 
 elif [ $opc -eq 4 ]; then
-    echo ""
+        echo ""
 	echo -e "$a ¿LHOST?$nc"
 	echo ""
 	read lhost
@@ -142,7 +142,7 @@ elif [ $opc -eq 4 ]; then
 		./SMBploit.sh
 
 elif [ $opc -eq 5 ]; then
-    echo ""
+        echo ""
 	echo -e "$a ¿LHOST?$nc"
 	echo ""
 	read lhost
@@ -163,7 +163,7 @@ elif [ $opc -eq 5 ]; then
 		./SMBploit.sh
 
 	elif [ $opc -eq 6 ]; then
-    echo ""
+        echo ""
 	echo -e "$a ¿LHOST?$nc"
 	echo ""
 	read lhost
@@ -184,7 +184,7 @@ elif [ $opc -eq 5 ]; then
 		./SMBploit.sh
 
 elif [ $opc -eq 7 ]; then
-    echo ""
+        echo ""
 	echo -e "$a ¿LHOST?$nc"
 	echo ""
 	read lhost
