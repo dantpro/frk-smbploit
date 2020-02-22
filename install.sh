@@ -25,8 +25,6 @@ echo -e "$b |$r  Email   $b: $a d4t4s3c@protonmail.com       $b|"
 echo -e "$b |$r  GitHub  $b: $a www.github.com/d4t4s3c       $b|"
 echo -e "$b ============================================ $b"
 
-chmod +x *
-
 cp SMBploit.rb /usr/share/metasploit-framework/modules/exploits/windows/smb
 
 echo -e "$b[$v+$b]$a Installing Wine $nc"
