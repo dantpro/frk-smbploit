@@ -24,6 +24,7 @@ echo -e "$b |$r  Author  $b: $a d4t4s3c                      $b|"
 echo -e "$b |$r  Email   $b: $a d4t4s3c@protonmail.com       $b|"
 echo -e "$b |$r  GitHub  $b: $a www.github.com/d4t4s3c       $b|"
 echo -e "$b ============================================ $b"
+echo ""
 
 cp SMBploit.rb /usr/share/metasploit-framework/modules/exploits/windows/smb
 
