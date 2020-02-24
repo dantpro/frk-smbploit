@@ -22,3 +22,5 @@ chmod +x install.sh
 chmod +x SMBploit.sh
 
 ./SMBploit.sh
+
+
