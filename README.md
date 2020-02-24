@@ -3,9 +3,9 @@ Pentesting tool for SMB protocol in Microsoft Windows
 
 **Screenshot**
 
-![](screenshot%20BANNER.png)
+![](/screenshot/screenshot1.png)
 
-![](screenshot.png)
+![](/screenshot/screenshot2.png)
 
 **Install:**
 
