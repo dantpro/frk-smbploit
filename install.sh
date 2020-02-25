@@ -1,19 +1,15 @@
 #!/bin/bash
-
 #Author: d4t4s3c
 #Email:  d4t4s3c@protonmail.com
 #GitHub: www.github.com/d4t4s3c
-
 #colors
 b="\033[1;37m"
 r="\033[1;31m"
 v="\033[1;32m"
 a="\033[1;33m"
 nc="\e[0m"
-
 clear
 sleep 1
-
 #banner
 echo ""
 echo -e "$b ============================================"
@@ -28,9 +24,11 @@ echo -e "$b |$r  Email   $b: $a d4t4s3c@protonmail.com       $b|"
 echo -e "$b |$r  GitHub  $b: $a www.github.com/d4t4s3c       $b|"
 echo -e "$b ============================================ $b"
 echo ""
-
+echo -e "$b[$v+$b]$a Add exploit to Metasploit-Framework $nc"
+sleep 2
+echo ""
 cp SMBploit.rb /usr/share/metasploit-framework/modules/exploits/windows/smb
-
+echo ""
 echo -e "$b[$v+$b]$a Installing Wine $nc"
 sleep 2
 echo ""
