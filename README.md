@@ -3,7 +3,7 @@ Pentesting tool for SMB protocol in Microsoft Windows
 
 **Screenshot**
 
-![](/screenshot/screenshot1.png)
+![](/screenshot/screenshot01.png)
 
 ![](/screenshot/screenshot2.png)
 
