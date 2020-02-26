@@ -1,7 +1,7 @@
 # SMBploit
 Pentesting tool for SMB protocol in Microsoft Windows
 
-#bd2c00ONLY USE FOR EDUCATIONAL PURPOSES
+**ONLY USE FOR EDUCATIONAL PURPOSES**
 
 **Screenshot**
 
