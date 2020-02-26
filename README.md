@@ -1,6 +1,8 @@
 # SMBploit
 Pentesting tool for SMB protocol in Microsoft Windows
 
+**ONLY USE FOR EDUCATIONAL PURPOSES**
+
 **Screenshot**
 
 ![](/screenshot/screenshot01.png)
