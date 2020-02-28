@@ -23,7 +23,7 @@ n6=6
 n7=7
 n8=8
 
-#services
+#serv
 service postgresql start
 msfdb init
 clear
@@ -57,7 +57,9 @@ function banner(){
 }
 
 function menu(){
+
 read -p " $(echo -e $r[$v$shell$a:$b~$r]$v# $nc)" opc
+
 if [ $opc -eq 0 ]; then
 	echo ""
 	echo -e "$a ¿RHOST?$nc"
@@ -148,6 +150,7 @@ elif [ $opc -eq 3 ]; then
 	sleep 1
 	banner
 	menu
+	
 elif [ $opc -eq 4 ]; then
         echo ""
 	echo -e "$a ¿LHOST?$nc"
@@ -172,6 +175,7 @@ elif [ $opc -eq 4 ]; then
 	sleep 1
 	banner
 	menu
+	
 elif [ $opc -eq 5 ]; then
         echo ""
 	echo -e "$a ¿LHOST?$nc"
@@ -196,6 +200,7 @@ elif [ $opc -eq 5 ]; then
 	sleep 1
 	banner
 	menu
+	
 elif [ $opc -eq 6 ]; then
         echo ""
 	echo -e "$a ¿LHOST?$nc"
@@ -220,6 +225,7 @@ elif [ $opc -eq 6 ]; then
 	sleep 1
 	banner
 	menu
+	
 elif [ $opc -eq 7 ]; then
         echo ""
 	echo -e "$a ¿LHOST?$nc"
@@ -244,6 +250,7 @@ elif [ $opc -eq 7 ]; then
 	sleep 1
 	banner
 	menu
+	
 elif [ $opc -eq 8 ]; then
 	echo ""
 	echo ""
