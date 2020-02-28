@@ -1,7 +1,9 @@
 #!/bin/bash
+
 #Author: d4t4s3c
 #Email:  d4t4s3c@protonmail.com
 #GitHub: www.github.com/d4t4s3c
+
 #colors
 b="\033[1;37m"
 r="\033[1;31m"
@@ -10,6 +12,7 @@ a="\033[1;33m"
 nc="\e[0m"
 clear
 sleep 1
+
 #banner
 echo ""
 echo -e "$b ============================================"
