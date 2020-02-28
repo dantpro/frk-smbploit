@@ -58,7 +58,6 @@ function banner(){
 
 function menu(){
 read -p " $(echo -e $r[$v$shell$a:$b~$r]$v# $nc)" opc
-
 if [ $opc -eq 0 ]; then
 	echo ""
 	echo -e "$a ¿RHOST?$nc"
