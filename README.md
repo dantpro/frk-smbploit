@@ -23,6 +23,8 @@ chmod +x *.sh
 
 ./SMBploit.sh
 
+-:- -:- -:- -:- -:-
+
 **DO NOT BE MAD**
 
 
