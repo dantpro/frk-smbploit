@@ -23,4 +23,6 @@ chmod +x *.sh
 
 ./SMBploit.sh
 
+**Do not be bad**
+
 
