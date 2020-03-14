@@ -127,7 +127,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    banner
 	    menu
     elif [ $opc -eq 2 ]; then
-        echo ""
+            echo ""
 	    echo -e "$a ¿LHOST?$nc"
 	    echo ""
 	    read lhost
@@ -151,7 +151,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    banner
 	    menu
     elif [ $opc -eq 3 ]; then
-        echo ""
+            echo ""
 	    echo -e "$a ¿LHOST?$nc"
 	    echo ""
 	    read lhost
@@ -175,7 +175,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    banner
 	    menu
     elif [ $opc -eq 4 ]; then
-        echo ""
+            echo ""
 	    echo -e "$a ¿LHOST?$nc"
 	    echo ""
 	    read lhost
@@ -192,14 +192,14 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    set TARGETARCHITECTURE x86;
 	    exploit;
 	    exit; "
-        echo ""
+            echo ""
 	    sleep 5
 	    clear
 	    sleep 1
 	    banner
 	    menu
     elif [ $opc -eq 5 ]; then
-        echo ""
+            echo ""
 	    echo -e "$a ¿LHOST?$nc"
 	    echo ""
 	    read lhost
@@ -223,7 +223,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    banner
 	    menu
     elif [ $opc -eq 6 ]; then
-        echo ""
+            echo ""
 	    echo -e "$a ¿LHOST?$nc"
 	    echo ""
 	    read lhost
@@ -247,7 +247,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    banner
 	    menu
     elif [ $opc -eq 7 ]; then
-        echo ""
+            echo ""
 	    echo -e "$a ¿LHOST?$nc"
 	    echo ""
 	    read lhost
@@ -274,17 +274,17 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo ""
 	    echo -e "$a        |\/\/\/|"
-        echo -e "        |      |" 
-        echo -e "        |      |" 
-        echo -e "        | (o)(o) " 
-        echo -e "        C      _) "
-        echo -e "         | ,___|  "
-        echo -e "         |   /    "
-        echo -e "        /____\ "
-        echo -e "       /      \ $nc"
-        echo -e "$b#### $v BYE $v HACKER $b ####"
-        echo ""
-        echo ""
+            echo -e "        |      |" 
+            echo -e "        |      |" 
+            echo -e "        | (o)(o) " 
+            echo -e "        C      _) "
+            echo -e "         | ,___|  "
+            echo -e "         |   /    "
+            echo -e "        /____\ "
+            echo -e "       /      \ $nc"
+            echo -e "$b#### $v BYE $v HACKER $b ####"
+            echo ""
+            echo ""
 	    sleep 3
 	    exit
     else
