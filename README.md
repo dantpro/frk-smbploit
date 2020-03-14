@@ -5,9 +5,9 @@ Pentesting tool for SMB (Samba) protocol in Microsoft Windows
 
 **Screenshot**
 
-![](/screenshot/screenshot01.png)
+![](/screenshot/screenshot1.png)
 
-![](/screenshot/screenshot02.png)
+![](/screenshot/screenshot2.png)
 
 **Install:**
 
