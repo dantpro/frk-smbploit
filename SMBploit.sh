@@ -31,7 +31,7 @@ function checkroot(){
 	    echo ""
 	    echo -e "$a check root user $nc"
 	    sleep 4
-	if [ "$(id -u)" == "0" ]; then
+    if [ "$(id -u)" == "0" ]; then
 	    echo ""
 	    echo -e " $b[$v$si$b] root $nc"
 	    sleep 4
@@ -40,7 +40,7 @@ function checkroot(){
 	    sleep 4
 	    echo ""
     else
-        echo ""
+            echo ""
 	    echo -e " $b[$r$no$b] root $nc"
 	    sleep 4
 	    echo ""
@@ -48,7 +48,7 @@ function checkroot(){
 	    sleep 4
 	    echo ""
 	    exit
-	fi	
+    fi	
 }
 
 checkroot
