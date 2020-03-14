@@ -25,7 +25,6 @@ n8=8
 
 #serv
 service postgresql start
-msfdb init
 clear
 sleep 1
 
